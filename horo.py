@@ -31,18 +31,18 @@ def job(sign, CHAT_ID=CHAT_ID):
     bot.send_message(chat_id=CHAT_ID, text=text, parse_mode="Markdown")
 
 if __name__ == '__main__':
-    schedule.every().day.at("19:00",'Europe/Moscow').do(job, sign="Рыбы", CHAT_ID='@pisces_the')
-    schedule.every().day.at("19:01",'Europe/Moscow').do(job, sign="Овен", CHAT_ID='@aries_the')
-    schedule.every().day.at("19:02",'Europe/Moscow').do(job, sign="Телец")
-    schedule.every().day.at("19:03",'Europe/Moscow').do(job, sign="Близнецы", CHAT_ID='@gemini_the')
-    schedule.every().day.at("19:04",'Europe/Moscow').do(job, sign="Рак")
-    schedule.every().day.at("19:05",'Europe/Moscow').do(job, sign="Лев")
-    schedule.every().day.at("19:06",'Europe/Moscow').do(job, sign="Дева")
-    schedule.every().day.at("19:07",'Europe/Moscow').do(job, sign="Весы")
-    schedule.every().day.at("19:08",'Europe/Moscow').do(job, sign="Скорпион")
-    schedule.every().day.at("19:09",'Europe/Moscow').do(job, sign="Стрелец")
-    schedule.every().day.at("19:10",'Europe/Moscow').do(job, sign="Козерог", CHAT_ID='@capricorn_the')
-    schedule.every().day.at("19:11",'Europe/Moscow').do(job, sign="Водолей", CHAT_ID='@aquarius_the')
+    schedule.every().day.at("18:00",'Europe/Moscow').do(job, sign="Рыбы", CHAT_ID='@pisces_the')
+    schedule.every().day.at("18:01",'Europe/Moscow').do(job, sign="Овен", CHAT_ID='@aries_the')
+    schedule.every().day.at("18:02",'Europe/Moscow').do(job, sign="Телец")
+    schedule.every().day.at("18:03",'Europe/Moscow').do(job, sign="Близнецы", CHAT_ID='@gemini_the')
+    schedule.every().day.at("18:04",'Europe/Moscow').do(job, sign="Рак")
+    schedule.every().day.at("18:05",'Europe/Moscow').do(job, sign="Лев")
+    schedule.every().day.at("18:06",'Europe/Moscow').do(job, sign="Дева")
+    schedule.every().day.at("18:07",'Europe/Moscow').do(job, sign="Весы")
+    schedule.every().day.at("18:08",'Europe/Moscow').do(job, sign="Скорпион")
+    schedule.every().day.at("18:09",'Europe/Moscow').do(job, sign="Стрелец")
+    schedule.every().day.at("18:10",'Europe/Moscow').do(job, sign="Козерог", CHAT_ID='@capricorn_the')
+    schedule.every().day.at("18:11",'Europe/Moscow').do(job, sign="Водолей", CHAT_ID='@aquarius_the')
 
     fifteen_minutes = 15 * 60
 
