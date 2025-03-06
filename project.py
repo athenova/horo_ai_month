@@ -8,7 +8,7 @@ class Project(SimplestBlogger):
     def __init__(self, **kwargs):
         super().__init__(            
             review_chat_id=-1002374309134,
-            production_chat_id='@horo_ai'
+            production_chat_id='@horo_ai',
             **kwargs)
 
     def _example_task_creator(self):
