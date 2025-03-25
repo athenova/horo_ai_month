@@ -3,14 +3,11 @@ from string import Template
 from datetime import datetime
 from datetime import timedelta
 import locale
+from simple_blogger.senders.TelegramSender import TelegramSender
+from simple_blogger.senders.VkSender import VkSender
+
 
 class Project(SimplestBlogger):
-    def __init__(self, **kwargs):
-        super().__init__(            
-            review_chat_id=-1002374309134,
-            production_chat_id='@horo_ai',
-            **kwargs)
-
     def _example_task_creator(self):
         prompt = Template(f"Составь гороскоп на $$month $$year для знака '$sign', используй смайликии, используй не более {self.topic_word_limit} слов")
         return [{ 
@@ -38,3 +35,16 @@ class Project(SimplestBlogger):
     def _system_prompt(self, _):
         return f"Ты - профессиональный астролог"
     
+class ProjectTelegram(Project):
+    def __init__(self, **kwargs):
+        super().__init__(            
+            reviewer=TelegramSender(),
+            senders=[TelegramSender(channel_id='@horo_ai')],
+            **kwargs)
+        
+class ProjectVk(Project):
+    def __init__(self, **kwargs):
+        super().__init__(            
+            reviewer=VkSender(group_id='229822833'),
+            senders=[VkSender()],
+            **kwargs)
